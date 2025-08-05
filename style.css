@@ -1,143 +1,62 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-}
 
 /* Navbar Styles */
-.navbar {
-  position: fixed;
-  width: 100%;
-  background-color: #333;
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
+  background-color: #2e8b57;
+  color: white;
+  position: sticky;
+  top: 0;
   z-index: 1000;
 }
 
-.navbar h1 {
-  color: #fff;
+.logo {
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.navbar ul {
-  display: flex;
+nav ul {
   list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-.navbar ul li {
-  margin-left: 20px;
-}
-
-.navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  background-color: #00aaff;
-}
-
-/* Hero Section */
-.hero {
-  margin-top: 60px;
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
+nav ul li a {
   color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+nav ul li a:hover {
+  color: #dfffe0;
 }
 
-.hero p {
-  font-size: 1.1rem;
-}
-
-/* Sections */
-section {
-  padding: 60px 20px;
-}
-
-/* Image Animations */
-.room-img,
-.gallery-img,
-.treatment-img {
-  width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
-  display: block;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.room-img:hover,
-.gallery-img:hover,
-.treatment-img:hover {
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  background-color: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  margin-top: 40px;
-}
-
-/* Responsive Navbar */
 .menu-toggle {
   display: none;
-  flex-direction: column;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
-.menu-toggle span {
-  height: 3px;
-  width: 25px;
-  background-color: white;
-  margin-bottom: 4px;
-  border-radius: 2px;
-}
-
-/* Mobile View */
+/* Responsive Navbar */
 @media screen and (max-width: 768px) {
-  .navbar ul {
+  nav ul {
     flex-direction: column;
-    background-color: #333;
+    background-color: #2e8b57;
     position: absolute;
-    top: 60px;
-    left: 0;
+    top: 70px;
+    right: 0;
     width: 100%;
     display: none;
   }
 
-  .navbar ul.show {
+  nav ul.active {
     display: flex;
-  }
-
-  .navbar ul li {
-    margin: 15px 0;
-    text-align: center;
   }
 
   .menu-toggle {
-    display: flex;
+    display: block;
   }
 }
