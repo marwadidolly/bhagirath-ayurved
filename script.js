@@ -5,17 +5,14 @@ function toggleMenu() {
   navbar.classList.toggle("active");
 }
 
-// Automatically close mobile menu after clicking a link (optional but useful)
+// Close navbar on link click (optional)
 document.querySelectorAll("#navbar a").forEach((link) => {
   link.addEventListener("click", function () {
-    const navbar = document.getElementById("navbar");
-    if (navbar.classList.contains("active")) {
-      navbar.classList.remove("active");
-    }
+    document.getElementById("navbar").classList.remove("active");
   });
 });
 
-// Gallery Lightbox
+// Lightbox for gallery (if any)
 document.querySelectorAll(".gallery img").forEach((img) => {
   img.addEventListener("click", function () {
     document.getElementById("lightbox").style.display = "block";
@@ -27,5 +24,5 @@ document.querySelector(".close").addEventListener("click", function () {
   document.getElementById("lightbox").style.display = "none";
 });
 
-// Optional: Initialize AOS animations (if you're using AOS library)
+// AOS animation init (if used)
 AOS.init();
