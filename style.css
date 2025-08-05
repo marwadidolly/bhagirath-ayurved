@@ -84,25 +84,32 @@ body {
   margin-bottom: 2rem;
 }
 
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 .hero-buttons .btn {
   background-color: #2e8b57;
   color: white;
   padding: 0.75rem 1.5rem;
-  margin: 0 0.5rem;
+  margin: 0.5rem;
   border-radius: 8px;
   text-decoration: none;
+  font-size: 1rem;
+  white-space: nowrap; /* mobile par line break na ho */
   transition: transform 0.3s ease, background-color 0.3s ease;
-  -webkit-tap-highlight-color: transparent;
-  will-change: transform, background-color;
 }
 
 .hero-buttons .btn:hover {
   background-color: #256d44;
   transform: translateY(-2px);
 }
-.hero-buttons .btn:focus {
-  outline: none;
-}
+
 
 
 /* Gallery */
@@ -198,3 +205,4 @@ body {
     display: block;
   }
 }
+
