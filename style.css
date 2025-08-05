@@ -92,12 +92,18 @@ body {
   border-radius: 8px;
   text-decoration: none;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  will-change: transform, background-color;
 }
 
 .hero-buttons .btn:hover {
   background-color: #256d44;
   transform: translateY(-2px);
 }
+.hero-buttons .btn:focus {
+  outline: none;
+}
+
 
 /* Gallery */
 .gallery {
