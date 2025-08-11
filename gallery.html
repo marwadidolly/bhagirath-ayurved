@@ -43,10 +43,15 @@
     <span class="close">&times;</span>
     <img class="lightbox-content" id="lightbox-img">
   </div>
-
-  <script src="script.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("active");
+    }
+  </script>
+  
 </body>
 </html>
+
 
 
