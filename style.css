@@ -224,48 +224,65 @@ body {
   color: #ff4444;
 }
 
-/* ====== Product Page Images (fixed) ====== */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+.products {
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-.product-item {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.product {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
-.product-item:hover {
+.product:hover {
   transform: translateY(-5px);
 }
 
-.product-item img {
+.product-img-box {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f9f9f9;
 }
 
-.product-info {
-  padding: 1rem;
-  text-align: center;
+.product-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 🔹 Image cut ya stretch nahi hogi */
+  transition: transform 0.3s ease;
 }
 
-.product-info h3 {
-  margin-bottom: 0.5rem;
-  color: #4CAF50;
+.product:hover .product-img-box img {
+  transform: scale(1.05);
 }
 
-.product-info p {
+.product h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  color: #2f4f2f;
+}
+
+.product p {
   font-size: 0.9rem;
-  color: #666;
+  color: #555;
 }
+
+
 
 /* Responsive Navbar */
 @media screen and (max-width: 768px) {
@@ -289,3 +306,4 @@ body {
     display: block;
   }
 }
+
