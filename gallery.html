@@ -52,6 +52,25 @@
     function toggleMenu() {
       document.getElementById("navbar").classList.toggle("active");
     }
+
+    // Lightbox Functionality
+    document.querySelectorAll(".gallery img").forEach((img) => {
+      img.addEventListener("click", function () {
+        document.getElementById("lightbox").style.display = "block";
+        document.getElementById("lightbox-img").src = this.src;
+      });
+    });
+
+    document.querySelector(".close").addEventListener("click", function () {
+      document.getElementById("lightbox").style.display = "none";
+    });
+
+    // Close lightbox when clicking outside the image
+    document.getElementById("lightbox").addEventListener("click", function (e) {
+      if (e.target !== document.getElementById("lightbox-img")) {
+        this.style.display = "none";
+      }
+    });
   </script>
 </body>
 </html>
