@@ -282,7 +282,53 @@ body {
   color: #555;
 }
 
+/* Consult Form Section */
+.consult-section {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if needed */
+  padding: 3rem 1rem;
+}
 
+.consult-section form {
+  max-width: 500px;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* About Section Adjustments */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  gap: 2rem;
+}
+
+.about-section .about-text {
+  max-width: 800px;
+  text-align: justify; /* Left-right proper */
+  line-height: 1.7;
+}
+
+.about-section .about-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #8BC34A;
+  transition: transform 0.4s ease;
+}
+
+.about-section .about-img:hover {
+  transform: scale(1.1);
+}
 
 /* Responsive Navbar */
 @media screen and (max-width: 768px) {
@@ -305,5 +351,23 @@ body {
   .mobile-menu-toggle {
     display: block;
   }
-}
 
+  /* About Section responsive */
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .about-section .about-text {
+    max-width: 100%;
+  }
+
+  .about-section .about-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Consult form responsive */
+  .consult-section form {
+    padding: 1.5rem;
+  }
+}
