@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -366,6 +365,57 @@ body {
   margin-bottom: 1rem;
 }
 
+/* ====== Treatment Section ====== */
+.treatment {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.treatment-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.treatment-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.treatment-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.treatment-item:hover img {
+  transform: scale(1.05);
+}
+
+.treatment-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.treatment-content h3 {
+  font-size: 1.3rem;
+  color: #2f4f2f;
+  margin-bottom: 0.5rem;
+}
+
+.treatment-content p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .about img {
@@ -395,5 +445,13 @@ body {
 
   .mobile-menu-toggle {
     display: block;
+  }
+
+  .treatment {
+    grid-template-columns: 1fr;
+  }
+
+  .treatment-item img {
+    height: 200px;
   }
 }
